@@ -1,0 +1,487 @@
+@import url(reset.css);
+@import url(font.css);
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307@1.1/NanumSquareNeoTTF-aLt.woff2') format('woff2');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'NanumSquareNeo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307@1.1/NanumSquareNeoTTF-cBd.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+
+
+body{
+  background-image: url(../image/allbg.png);
+  font-family: 'NanumSquareNeo';
+  
+}
+
+.mob_btn,
+.scrollTop_btn_mo{
+  display: none;
+}
+
+
+/* Scrolling->body에 scrolling을 붙이면--------------------------- */
+.scrolling header{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.scrolling .header_logo.white{opacity: 0;}
+.scrolling .header_logo.black{opacity: 1;}
+.scrolling .mob_btn span{background-color: #000;}
+
+.scrolling .main .main_tit{
+  color: #0C2C5E;
+}
+.scrolling .header_left .site_group{
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 3.6rem;
+}
+
+/* scrollTop_btn */
+.scrollTop_btn_pc{
+  position: fixed;
+  z-index: 9999;
+  bottom: 2rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+  background: #fff url(../image/btn_fixedtop.svg) no-repeat center;
+  text-indent: -9999px;
+  border-radius: 50%;
+  border: 0.1rem solid #ededed;
+  box-shadow: 0 .6rem 2rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.5s;
+}
+.scrollTop_btn.On{opacity: 1;}
+
+
+
+/* Section0 ______________ */
+#section0{
+  /* background: url(../image/ocean/ocean22.png) no-repeat center top/cover; */
+  height: 60rem;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+.visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.visual-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  background: transparent;
+  opacity: 0;
+  transition: opacity .25s ease; /* 크로스페이드 */
+  z-index: -1; /* 텍스트보다 아래 */
+}
+
+.visual-video.is-active {
+  opacity: 1;
+}
+
+
+/* 텍스트 가독용 오버레이가 필요하다면 비디오 위에서 지정 */
+.visual::after{
+  content:"";
+  position:absolute; inset:0;
+  /* 필요하면 밝기/그라데이션 넣으세요 */
+  background: linear-gradient(transparent, rgba(0,0,0,.25));
+  pointer-events:none;
+}
+
+
+
+
+
+#section0 .tit_wrap{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5rem;
+}
+#section0 p.txt1{
+  margin: 2.8rem 0;
+  font-size: 2rem;
+  color: #fff;
+}
+#section0 h2.tit{
+  color: #fff;
+  font-size: 3rem;
+  line-height: 8rem;
+}
+
+.scroll{
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  width: 2.2rem;
+  height: 4.6rem;
+  background: url(../image/icon_scroll.svg) no-repeat center;
+  text-indent: -9999px;
+  /* opacity: 0; */
+  animation: scroll-ani 1.5s 2.2s infinite ease-in-out;
+}
+
+@keyframes scroll-ani{
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-0.7rem);}
+  100% {transform: translateY(0);}
+}
+
+
+/* 1 */
+
+#section1 h2{
+  font-size: 2rem;
+  text-align: center;
+  margin: 10rem 0;
+}
+.magakingbg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.magabg{
+  /* border: 1px solid #000; */
+  width: 130rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10rem;
+}
+
+.magaleft img{
+  width: 30rem;
+  height: 40rem;
+}
+
+.magaright img{
+  width: 30rem;
+  height: 40rem;
+}
+
+/* 2 */
+.iconkingbg{
+  background-image: url(../image/sand2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  margin-top: 10rem;
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin: 10rem 0;
+}
+
+.iconbg{
+  border-radius: 3rem;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  transition: 0.9s;
+}
+
+.iconbg2{
+  border-radius: 3rem;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iconbg2:hover:before{height: 100%;}
+.iconbg2:hover{
+  color: #f8f8f8;
+  transform: rotateY(360deg); /* y축(세로)을 기준으로 360도 회전 */
+}
+
+.iconbg2:hover{
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.iconone img:hover{
+  transform: rotateY(360deg);
+}
+
+
+.iconone img{
+  width: 5rem;
+  transition: 0.9s;
+}
+
+.iconone .color img{width: 6rem;}
+
+.text4{
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: 0.5s;
+}
+.iconbg:hover .text4{
+  opacity: 1;
+}
+
+/* .iconbg:hover .icon{display: none;} */
+
+/* 3 */
+.bluebg{
+  width: 100%;
+  height: 70rem;
+  background-image: url(../image/ocean_sub1/cafebg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-box{
+  position: relative;
+  left: 60rem;
+}
+
+.blueimg img{
+  width: 50rem;
+  height: 30rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+ .onelist{
+  display:flex;
+  flex-wrap:wrap;
+  gap: clamp(16px, 2vw, 28px);
+}
+.onelist .img_box{
+  flex:0 0 calc(25% - clamp(16px, 2vw, 28px)*0.75); /* 4개/줄 */
+}
+
+.img_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.img_box img{
+  width: 15rem;
+  height: 15rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10rem;
+  margin: 0 3rem;
+}
+
+.text8{
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.img_box:hover{
+  scale: 1.1;
+  z-index: 222;
+}
+
+/* 4 */
+#section4{flex-direction: column-reverse;}
+
+.bluebg2{
+  margin-top: 10rem;
+  width: 100%;
+  height: 70rem;
+  background-image: url(../image/ocean_sub2/Frame\ 218.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+
+.text-box2{
+  position: relative;
+  left: 60rem;
+}
+
+.blueimg2 img{
+  width: 50rem;
+  height: 30rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.onelist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.img_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.img_box img{
+  width: 15rem;
+  height: 15rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10rem;
+  margin: 0 3rem;
+}
+
+.text8{
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+
+/* 5 */
+.section-box{
+  margin: 10rem 0;
+  width: 100%;
+  height: 50rem;
+  position: relative;
+}
+
+.tit-box{
+  text-align: center;
+}
+
+.all-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.text-left{
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 35rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  line-height: 3rem;
+}
+
+.text-left ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-left li{
+  border-bottom: 1px solid #999;
+  width: 20rem;
+}
+
+.img-right img{
+  width: 40rem;
+  height: 45rem;
+}
+
+.img-right{
+  position: absolute;
+  top: 15%;
+  right: 25%;
+}
+
+.margin{margin-bottom: 2rem;}
+
+.text11 li:hover{
+  border-bottom: 1px dashed red;
+}
+
+
+/* footer */
+#wrap{width:100%;}
+
+.barbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer_copy{
+	background-color: #777;
+	width: 100%;
+	height: 10rem;
+	margin: 10rem auto;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copy_left{flex: 1;}
+.copy_left img{
+  width: 7rem;
+  height: 7rem;
+}
+.copy_center{flex: 5;}
+
+.copy_right{
+	height: 70px;
+	flex: 1;
+	margin-top: 2rem;
+  margin-right: 2rem;
+	text-align: center;
+}
+
+.copy_right img{transition: 0.5s;}
+.copy_right img:hover{transform: translateY(-15%);}
+
+.copy_center ul{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+.copy_center ul li{
+	margin: 0 10px;
+	font-size: 1rem;
+	color: #eee;
+}
+address{
+	font-style:normal;
+	color:#9b9b9b;
+	font-size: 0.9rem;
+	text-align: center;
+}

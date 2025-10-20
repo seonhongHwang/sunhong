@@ -1,0 +1,100 @@
+header{
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+  z-index: 100;
+}
+nav{
+  width: 130rem;
+  height: 6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* logo */
+.header_tit h1{
+  position: relative;
+}
+
+.header_tit h1 img{
+  width: 8rem;
+  height: 8rem;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.header_logoblue{opacity: 1;}
+.header_logo{opacity: 0;}
+
+.header_inner{
+  width: 130rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Main Menu */
+
+ul.gnb{
+  display: flex;
+}
+
+.gnb>.main{
+  position: relative;
+}
+.gnb>.main>a{
+  height: 5rem;
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+	font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.gnb>.main:hover>a{color: #fff;}
+
+
+/* Sub Menu */
+.sub{
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  z-index: 100;
+  width: 100%;
+  height: 48rem;
+  top: 100%;
+  left: 0;
+
+}
+.sub li{
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub li a {
+	color: #fff;
+	font-size: 1rem;
+  transition: 0.35s;
+}
+.sub li a:hover {
+  color: sandybrown;
+}
+
+/* Sub-menu */
+
+/*100%서브배경박스*/
+.sub_bgbox{ 
+  display:none;
+  position: fixed;
+	width:100%;
+	height:25rem;
+  background: transparent;
+  background: rgba(0,0,0,0.5);
+}
