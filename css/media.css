@@ -315,7 +315,7 @@
   /* section0 */
   #section0{
     background: url(../image/ocean/ocean_1.jpg) no-repeat center bottom/cover;
-    height: 100vh;
+    height: 50rem;
     padding: 0;
     overflow: hidden;
   }
@@ -329,19 +329,27 @@
   
   #section0 p.txt1{
     margin: 2.8rem 0;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #fff;
   }
   
   #section0 h2.tit{
     color: #fff;
-    font-size: 1.8rem;
-    line-height: 5rem;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
   }
 
   /* section1 */
   .magabg{flex-direction: column;}
   .magaleft{margin-bottom: 5rem;}
+  .magaleft img{height: 30rem;}
+  .magaright img{height: 30rem;}
+  .text1{font-size: 1.3rem;}
+  .text2{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
 
   /* section2 */
   .iconkingbg{
@@ -362,10 +370,12 @@
     top: 2rem;
     left: 10%;
   }
+
   
-  .text5{font-size: 2rem;}
-  .text6{font-size: 1.4rem;}
-  .text7{font-size: 1.2rem;}
+  .text5{font-size: 1.8rem;}
+  .text6{font-size: 1.2rem;}
+  .text7{font-size: 1rem;}
+  .text8{font-size: 1.4rem;}
 
   .blueimg img{
     width: 40rem;
@@ -413,16 +423,16 @@
   }
 
   .img-right img{
-    width: 30rem;
-    height: 30rem;
+    width: 20rem;
+    height: 20rem;
   }
 
   .text-left{
     position: absolute;
-    width: 30rem;
+    width: 26rem;
     height: 25rem;
-    top: 20rem;
-    left: 3.3rem;
+    top: 18rem;
+    left: 0.8rem;
   }
 
   .img-right{
@@ -439,6 +449,18 @@
     justify-content: center;
     align-items: center;
   }
+
+  .copy_left{
+    text-align: center;
+  }
+
+  .copy_center ul li a{
+    font-size: 0.6rem;
+  }
+  .copy_center address{
+    font-size: 0.5rem;
+  }
+    
 
   .copy_right{
     display: none;
@@ -457,7 +479,7 @@
     display: block;
     position: fixed;
     z-index: 5;
-    width: 8rem;
+    width: 6rem;
     bottom: 3rem;
     right: 3rem;
     border-radius: 1rem;
@@ -473,7 +495,7 @@
     display: flex;
     flex-direction: column;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
   
   .scrollTop_btn_mo a:last-child{
