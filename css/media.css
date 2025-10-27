@@ -450,15 +450,16 @@
     align-items: center;
   }
 
-  .copy_left{
-    text-align: center;
+  .copy_left img{
+    width: 5rem;
+    height: 5rem;
   }
 
   .copy_center ul li a{
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   .copy_center address{
-    font-size: 0.5rem;
+    font-size: 0.4rem;
   }
     
 
