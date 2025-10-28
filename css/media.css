@@ -119,6 +119,10 @@
   color: #0066cc;
 }
 
+.sub_menu .main:hover > .main_tit{
+  color: #0066cc !important;    
+}
+
 /* 화살표 아이콘 */
 .sub_menu .main > .main_tit:before,
 .sub_menu .main > .main_tit:after {
