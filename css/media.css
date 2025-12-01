@@ -419,11 +419,14 @@
   }
 
   /* section5 */
+
+
   .all-box{
-    width: 100%;
-    height: 100%;
     position: relative;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .img-right img{
@@ -433,8 +436,8 @@
 
   .text-left{
     position: absolute;
-    width: 26rem;
-    height: 25rem;
+    width: 23rem;
+    height: 26rem;
     top: 18rem;
     left: 0.8rem;
   }
@@ -443,7 +446,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 4rem;
+    right: 4.5rem;
   }
 
   /* footer */
@@ -460,10 +463,10 @@
   }
 
   .copy_center ul li a{
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   .copy_center address{
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
     
 
